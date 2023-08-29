@@ -1,3 +1,5 @@
+*{
+box-sizing: border-box;}
 html{
     background-color:#0F1624;
     
@@ -191,15 +193,20 @@ margin-left: 80px;
 }
 .история{
 position: relative;
-
+justify-content: space-between;
+display: flex;
+padding-left: 20px;
+padding-right: 20px;
+box-sizing: border-box;
+width: 80%;
+margin: 0 auto;
 }
 .поток-истории{
     position: absolute;
     top: 57px;
     height: 6px;
     background: #FFF;
-width: 100%;
-}
+width: 100%;}
 .история-инфо{
     color: #FFF;
 text-align: center;
@@ -221,4 +228,28 @@ align-items: center;
     background: #FFF;
     border-radius: 50%;
 }
+.подвал{
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+}
+.подвал a{
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 40px;
+}
+footer{
+        display: flex;
+    justify-content: space-between; 
+    width: 100%;
+    margin-top: 50px;    
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
 
