@@ -75,6 +75,16 @@ row-gap: 40px;
 justify-items: center;
 align-items: center;
 }
+@media (max-width:1024px) {
+ .проекты-карточки{
+  grid-template-columns: 1fr 1fr;  
+ }   
+}
+@media (max-width:425px) {
+    .проекты-карточки{
+     grid-template-columns:  1fr;  
+    }      
+   }
 .проекты h1{
     color: #FFF;
     font-family: Poppins;
