@@ -1,4 +1,4 @@
-let number = 10;
+/*let number = 10;
 let string = "'kavichka'";
 let bool = false;
 let nothing = null;
@@ -8,7 +8,6 @@ let obgect = {
   age: 123,
 };
 console.log(number, string, bool, nothing, empty, obgect);
-
 console.log(obgect.age, obgect.clichka);
 
 // alert('abdurbec')
@@ -147,3 +146,15 @@ for (let i = 0; i < mas.length; i++) {
   console.log(mas[i]);
   console.log(i);
 }
+*/
+let cord = {
+  image: "./изображения/конь в пальто.jpg",
+  title: "конь в польтовом пальто",
+  text: "eto russkiy text",
+  linc: "https://www.youtube.com/watch?v=BL8ZKeGCaIg",
+};
+let listNEglist = document.querySelector(".проекты-карточки");
+listNEglist.insertAdjacentHTML(
+  "afterbegin",
+  `<article class="отдельная-карточка"><img src="./изображения/конь в пальто.jpg" alt="конь в пальто" /><h3>${cord.title}</h3><hr /><p>  ${cord.text}.</p><button><a href="${cord.linc}">Projects </a></button></article>`
+);
