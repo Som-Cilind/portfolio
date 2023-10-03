@@ -141,6 +141,9 @@ hr {
   width: 100%;
   align-items: center;
 }
+.cTaTi {
+  width: 100%;
+}
 .статы {
   width: 75%;
   display: flex;
@@ -154,13 +157,17 @@ hr {
 .статы-низ {
   background: #162950;
   height: 18px;
-  border-radius: 10px;
+  border-bottom-right-radius: 50%;
+  overflow: hidden;
+  border-top-right-radius: 50%;
+  /* border-radius: 10px; */
 }
 .статы-уровень {
-  width: 50%;
   background-color: rgba(81, 176, 226, 0.721);
   height: 100%;
-  border-radius: 10px;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  /* border-radius: 10px; */
 }
 .технологии h1 {
   color: white;

@@ -119,14 +119,14 @@ console.log(bobr);
 let btn = document.querySelector(".btn");
 console.log(btn);
 
-btn.onclick = function click() {
-  btn.innerHTML = "соединение...";
-  btn.style.color = "white";
-  console.log("достижение: вы нажали кнопку");
-  setTimeout(() => {
-    btn.innerHTML = "bobr";
-  }, 1000);
-};
+// btn.onclick = function click() {
+//   btn.innerHTML = "соединение...";
+//   btn.style.color = "white";
+//   console.log("достижение: вы нажали кнопку");
+//   setTimeout(() => {
+//     btn.innerHTML = "bobr";
+//   }, 1000);
+// };
 
 let mas = ["arbuz", "birka", "siniCa"];
 // mas.pop();
@@ -147,14 +147,78 @@ for (let i = 0; i < mas.length; i++) {
   console.log(i);
 }
 */
-let cord = {
-  image: "./изображения/конь в пальто.jpg",
-  title: "конь в польтовом пальто",
-  text: "eto russkiy text",
-  linc: "https://www.youtube.com/watch?v=BL8ZKeGCaIg",
-};
+
+let masCord = [
+  {
+    image: "./изображения/конь в пальто.jpg",
+    title: "конь в польтовом пальто",
+    text: "eto russkiy text",
+    linc: "https://www.youtube.com/watch?v=BL8ZKeGCaIg",
+  },
+  {
+    image: "./изображения/гусь.jpg",
+    title: "goSsE",
+    text: "gusskiy text",
+    linc: "https://www.youtube.com/watch?v=BL8ZKeGCaIg",
+  },
+  {
+    image: "./изображения/сом.jpeg",
+    title: "ыаыаы",
+    text: "буль",
+    linc: "https://www.youtube.com/watch?v=BL8ZKeGCaIg",
+  },
+];
+
 let listNEglist = document.querySelector(".проекты-карточки");
-listNEglist.insertAdjacentHTML(
-  "afterbegin",
-  `<article class="отдельная-карточка"><img src="./изображения/конь в пальто.jpg" alt="конь в пальто" /><h3>${cord.title}</h3><hr /><p>  ${cord.text}.</p><button><a href="${cord.linc}">Projects </a></button></article>`
-);
+
+masCord.forEach((element) => {
+  console.log(element);
+  listNEglist.insertAdjacentHTML(
+    "afterbegin",
+    `<article class="отдельная-карточка"><img src="${element.image}" alt="конь в пальто" /><h3>${element.title}</h3><hr /><p>  ${element.text}.</p><button><a href="${element.linc}">Projects </a></button></article>`
+  );
+});
+
+let porosya = document.querySelector(".cTaTi");
+
+let mas = [
+  {
+    title: "html",
+    level: 36,
+  },
+
+  {
+    title: "seldireY",
+    level: 76,
+  },
+  {
+    title: "grecheskiy napoleon",
+    level: 1,
+  },
+  {
+    title: "mihail jaxon",
+    level: 97,
+  },
+  {
+    title: "rozoviy orex y krilca",
+    level: Math.floor(Math.random() * 999.9),
+  },
+];
+
+mas.forEach((element) => {
+  porosya.insertAdjacentHTML(
+    "beforeend",
+    `<div class="статы">
+  <div class="статы-верх">
+    <h3>${element.title}</h3>
+    
+    <h4>${element.level}</h4>
+  </div>
+  <div class="статы-низ">
+    <div style="width:${element.level}%;" class="статы-уровень"></div>
+  </div>
+</div>`
+  );
+});
+
+// дз добать ещё технологий, попробывать вставлять разные техннологии
