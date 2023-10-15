@@ -184,12 +184,12 @@ let porosya = document.querySelector(".cTaTi");
 let mas = [
   {
     title: "html",
-    level: 36,
+    level: 132,
   },
 
   {
     title: "seldireY",
-    level: 76,
+    level: 66,
   },
   {
     title: "grecheskiy napoleon",
@@ -197,11 +197,15 @@ let mas = [
   },
   {
     title: "mihail jaxon",
-    level: 97,
+    level: 49,
   },
   {
     title: "rozoviy orex y krilca",
     level: Math.floor(Math.random() * 999.9),
+  },
+  {
+    title: "bobr",
+    level: 55,
   },
 ];
 
@@ -210,7 +214,17 @@ mas.forEach((element) => {
     "beforeend",
     `<div class="статы">
   <div class="статы-верх">
-    <h3>${element.title}</h3>
+    <h3>${element.title}
+    ${
+      element.level < 20
+        ? "bobr maliy"
+        : element.level < 50
+        ? "norm bobr"
+        : element.level > 60
+        ? "mega bobr"
+        : "ne bobr"
+    }
+    </h3>
     
     <h4>${element.level}</h4>
   </div>

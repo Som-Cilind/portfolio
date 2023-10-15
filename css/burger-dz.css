@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* .dina {
+  width: 99px;
+  height: 66px;
+  padding-left: 30px;
+  display: block;
+  background-color: rgba(194, 182, 127, 0.737);
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  z-index: 10;
+} */
+.burger-dz {
+  display: block;
+  width: 19.00003px;
+  height: 40.00001px;
+  background-color: purple;
+  position: fixed;
+  top: 60px;
+  right: 50px;
+  z-index: 1234567890;
+}
+.nenuu {
+  background-color: lightpink;
+  top: 0;
+  bottom: 0;
+  right: -124px;
+  width: 123px;
+  height: 1234px;
+  position: fixed;
+  transition: 1s;
+}
+#check:checked ~ .nenuu {
+  transition: 0.4s;
+  right: 21px;
+}
+#check {
+  display: none;
+}
+.menu-fon {
+  display: none;
+}
+@media (max-width: 600px) {
+  .menu-fon {
+    display: block;
+  }
+}

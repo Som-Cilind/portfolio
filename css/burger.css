@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.komar {
+  width: 67px;
+  height: 66px;
+  padding-left: 30px;
+  display: block;
+  background-color: lawngreen;
+  position: fixed;
+  top: 100px;
+  right: 200px;
+  z-index: 10;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.arbuz {
+  width: 1234567890px;
+  height: 123456789px;
+  padding-left: 66px;
+  display: none;
+  background-color: rgb(0, 213, 255);
+}
+#molb:checked ~ .arbuz {
+  display: block;
+}
+#molb {
+  display: none;
+}
+
+.burger {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+.burger span {
+  display: block;
+  width: 100px;
+  height: 4px;
+  background-color: rgb(116, 78, 69);
+}
+.burger span::before {
+  display: block;
+  content: "";
+  width: 30px;
+  height: 4px;
+  background-color: blue;
+  position: absolute;
+  top: 5px;
+}
+.burger span::after {
+  /* content: "komariki-na-vozdushnom-sharike"; */
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: rgb(164, 252, 92);
+  position: absolute;
+  bottom: 5px;
+}
+
+#check:checked ~ .burger > span {
+  /* height: 0; */
+  width: 20px;
+}
+#check:checked ~ .burger > span::before {
+  transform: rotate(45deg);
+  top: 12.5px;
+  right: -10px;
+  background-color: rgba(255, 213, 0, 0.722);
+}
+#check:checked ~ .burger > span::after {
+  transform: rotate(-45deg);
+  bottom: 12.5px;
+  left: -9px;
+}
